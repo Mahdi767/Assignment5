@@ -6,7 +6,7 @@ document.getElementById('Noakhali-donate').addEventListener('click',function(eve
   
 const totalAmount = getTextById('main-money');
     const NoakhaliInput = getInputById('Noakhali-input');
-if(totalAmount >= NoakhaliInput && NoakhaliInput>0){
+if(totalAmount >= NoakhaliInput && Number.isInteger(NoakhaliInput) && NoakhaliInput>=1){
 document.getElementById('Noakhali-money').innerText =NoakhaliInput + donationAmount1;
 document.getElementById('main-money').innerText = totalAmount - NoakhaliInput;
 event.preventDefault();
@@ -44,7 +44,7 @@ document.getElementById('feni-donate').addEventListener('click',function(event){
     
 const totalAmount = getTextById('main-money');
     const feniInput = getInputById('feni-input');
-    if(totalAmount>=feniInput && feniInput>0){
+    if(totalAmount>=feniInput && Number.isInteger(feniInput) && feniInput>=1){
         document.getElementById('feni-money').innerText =  feniInput + donationAmount2;
         document.getElementById('main-money').innerText = totalAmount - feniInput;
         event.preventDefault();
@@ -79,7 +79,7 @@ document.getElementById('qouta-donate').addEventListener('click',function(event)
   
 const totalAmount = getTextById('main-money');
     const QoutaInput = getInputById('qouta-input');
-if(totalAmount >= QoutaInput && QoutaInput>0){
+if(totalAmount >= QoutaInput && Number.isInteger(QoutaInput) && QoutaInput>=1){
 document.getElementById('qouta-money').innerText =QoutaInput + donationAmount3;
 document.getElementById('main-money').innerText = totalAmount - QoutaInput;
 event.preventDefault();
