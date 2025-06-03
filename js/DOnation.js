@@ -9,6 +9,9 @@ const totalAmount = getTextById('main-money');
 if(totalAmount >= NoakhaliInput && NoakhaliInput>0){
 document.getElementById('Noakhali-money').innerText =NoakhaliInput + donationAmount1;
 document.getElementById('main-money').innerText = totalAmount - NoakhaliInput;
+event.preventDefault();
+  dialog.show();
+
 
 // History Section
 const date = new Date();
@@ -36,7 +39,7 @@ else{
 
 // Feni donation Section
 document.getElementById('feni-donate').addEventListener('click',function(event){
-    event.preventDefault();
+    // event.preventDefault();
     const donationAmount2 = getTextById('feni-money');
     
 const totalAmount = getTextById('main-money');
@@ -44,6 +47,8 @@ const totalAmount = getTextById('main-money');
     if(totalAmount>=feniInput && feniInput>0){
         document.getElementById('feni-money').innerText =  feniInput + donationAmount2;
         document.getElementById('main-money').innerText = totalAmount - feniInput;
+        event.preventDefault();
+  dialog.show();
 
         // History Section
         const date = new Date();
@@ -69,7 +74,7 @@ const totalAmount = getTextById('main-money');
 // Qouta movement Section
 
 document.getElementById('qouta-donate').addEventListener('click',function(event){
-    event.preventDefault();
+    
     const donationAmount3  =getTextById('qouta-money');
   
 const totalAmount = getTextById('main-money');
@@ -77,6 +82,9 @@ const totalAmount = getTextById('main-money');
 if(totalAmount >= QoutaInput && QoutaInput>0){
 document.getElementById('qouta-money').innerText =QoutaInput + donationAmount3;
 document.getElementById('main-money').innerText = totalAmount - QoutaInput;
+event.preventDefault();
+  dialog.show();
+
 
 // History Section
 const date = new Date();
@@ -92,7 +100,7 @@ const formatdate = date.toString();
         document.getElementById('history-page').prepend(historyDiv);
 
         // Optionally clear input
-        document.getElementById('QoutaInput').value = '';
+        document.getElementById('qouta-input').value = '';
 
 
 }
